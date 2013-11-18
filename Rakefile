@@ -42,6 +42,13 @@ namespace :build do
     Packager::MustachePackager.build
   end
 
+  desc "Build mustache_inheritance_govuk_template-#{GovukTemplate::VERSION} into the pkg directory"
+  task :mustache_inheritance => :compile do
+    puts "Building pkg/mustache_inheritance_govuk_template-#{GovukTemplate::VERSION}"
+    require 'packager/mustache_inheritance_packager'
+    Packager::MustacheInheritancePackager.build
+  end
+
   desc "Build and release gem to gemfury if version has been updated"
   task :and_release_if_updated => :build do
     p = GemPublisher::Publisher.new('govuk_template.gemspec')

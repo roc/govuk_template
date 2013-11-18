@@ -31,6 +31,12 @@ To generate the tarball of Play Framework templates run `build:play` rake task. 
 
 To generate the tarball, run the `build:tar` rake task.  This will produce a tarball in the `pkg` directory.
 
+### Mustache Inheritance version
+
+There is a [proposal for Mustache to support template inheritance](https://github.com/mustache/spec/issues/38) this is supported in both the `mustache.java` and the `hogan.js` implementations of Mustache.
+
+To generate the tarball of the Mustache Inheritance templates run the `build:mustache_inheritance` rake task. This will produce a tarball in the `pkg` directory.
+
 ## Development
 
 The source files are in the `/source` directory.  The `compile` rake task builds the `/app` contents from these sources.  This process involves the following:
